@@ -1,0 +1,78 @@
+[
+    {
+        "Model": "SARIMAX",
+        "Parameters": {
+            "order": [
+                3,
+                1,
+                3
+            ],
+            "seasonal_order": [
+                1,
+                1,
+                1,
+                7
+            ]
+        },
+        "NRMSE": 0.14757129058495796,
+        "MAPE": 6.687878937082479e+19,
+        "MAE": 386306.3935486219,
+        "R\u00b2": -1.656720859100579
+    },
+    {
+        "Model": "Prophet",
+        "Parameters": "without exogeneous variables",
+        "NRMSE": 0.10937843920566573,
+        "MAPE": 1.4338755238509534e+20,
+        "MAE": 265234.6544332331,
+        "R\u00b2": -0.45950510525269395
+    },
+    {
+        "Model": "XGBoost",
+        "Parameters": {
+            "objective": "reg:squarederror",
+            "colsample_bytree": 0.8,
+            "learning_rate": 0.1,
+            "max_depth": 3,
+            "n_estimators": 50,
+            "subsample": 1.0
+        },
+        "NRMSE": 0.08277965636963118,
+        "MAPE": 6.332082549673071e+19,
+        "MAE": 149020.86915668022,
+        "R\u00b2": 0.15924634328677134
+    },
+    {
+        "Model": "LSTM",
+        "Parameters": {
+            "units": 50,
+            "activation": "tanh",
+            "val": "recent"
+        },
+        "NRMSE": 0.07958311144933632,
+        "MAPE": 3.7870627124036985e+19,
+        "MAE": 146400.94901658603,
+        "R\u00b2": 0.22292425088463141
+    },
+    {
+        "Model": "Random_forest",
+        "Parameters": {
+            "max_depth": 5,
+            "min_samples_leaf": 2,
+            "min_samples_split": 10,
+            "n_estimators": 50
+        },
+        "NRMSE": 0.11107838728191789,
+        "MAPE": 1.0271937783582502e+20,
+        "MAE": 286930.3920118509,
+        "R\u00b2": -0.5052245958111543
+    },
+    {
+        "Model": "Prophet_online",
+        "Parameters": "online toutles 7 jours",
+        "NRMSE": 0.06430274844726859,
+        "MAPE": 2.358871850378296e+19,
+        "MAE": 116380.89721781657,
+        "R\u00b2": 0.495569605778459
+    }
+]
